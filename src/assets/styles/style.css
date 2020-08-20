@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin-bottom: 200px;
+  display: flex;
+  justify-content: center;
+}
+
+/* 
+font-family: 'Poppins', sans-serif;
+font-family: 'Roboto', sans-serif; 
+*/
+
+.bg-title {
+  font-family: 'Roboto', sans-serif;
+}
+
+.sm-title {
+  font-size: 3rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.message {
+  font-size: large;
+}
+
+.restart {
+  width: 7%;
+  margin: auto;
+  padding: 7px;
+  float: right;
+  background: cadetblue;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.game-template {
+  width: 50%;
+  margin: auto;
+  background: cornflowerblue;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 5px;
+}
+
+.game-cell {
+  height: 150px;
+  background: coral;
+}
