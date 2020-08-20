@@ -11,6 +11,10 @@ const startApp = (() => {
   cellDivs.forEach(e => {
     e.onclick = () => {
       updateGameArray(e.getAttribute('index'), currentSymbol);
+      const winner = gameLogic.getWinner(getGameArray());
+      if (winner) {
+        alert('Win');
+      }
       if (currentSymbol === 'X') {
         currentSymbol = 'O';
       } else {
