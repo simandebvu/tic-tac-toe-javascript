@@ -1,3 +1,5 @@
+import Display from './display';
+
 const gameBoard = (() => {
   const gameArray = [
     '', '', '',
@@ -6,39 +8,26 @@ const gameBoard = (() => {
   ];
   const getGameArray = () => gameArray;
 
-  const restartBtn = () => {
-    while (gameArray.length > 0) {
-      gameArray.pop();
-    }
-  };
-
-  const renderGameBoard = () => {
-    console.log(gameArray);
-    const cellDivs = document.querySelectorAll('.game-cell');
-    gameArray.forEach(item => {
-      if (item.length > 0) {
-        cellDivs[gameArray.indexOf(item)].innerHTML = item;
-      }
+  const resetBoard = () => {
+    gameArray.forEach((item, idx, arr) => {
+      arr[idx] = '';
     });
   };
 
+
   const updateGameArray = (index, value) => {
-    console.log(gameArray);
-    if (gameArray[index].trim.length >= 0) {
+    if (gameArray[index] === '') {
       gameArray[index] = value;
-      renderGameBoard();
+      Display.updateGameBoard(index, value);
     } else {
-      console.log(gameArray[index].trim.length);
-      // alert('Index already occupied with a value');
+      alert('Index already occupied with a value');
     }
   };
 
   return {
-    restartBtn,
+    resetBoard,
     getGameArray,
-    renderGameBoard,
     updateGameArray,
   };
-
 })();
 export default gameBoard;

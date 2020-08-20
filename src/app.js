@@ -1,23 +1,20 @@
 import './assets/styles/style.css';
 import gameBoard from './modules/gameBoard';
-
+import gameLogic from './modules/gameLogic';
 
 const startApp = (() => {
-  const { getGameArray, renderGameBoard, updateGameArray } = gameBoard;
+  const { getGameArray, updateGameArray } = gameBoard;
   const cellDivs = document.querySelectorAll('.game-cell');
-  const cellHandler = (e) => {
-    console.log(e);
-  };
+  gameLogic.initResetButton();
 
   cellDivs.forEach(e => {
     // const currentIndex = e.getAttribute('index');
     // e.addEventListener('click', cellHandler);
     e.onclick = () => {
-      console.log(e.getAttribute('index'));
       updateGameArray(e.getAttribute('index'), 'X');
     };
   });
-  return { updateGameArray, getGameArray, renderGameBoard };
+  return { getGameArray };
 })();
 
 // Select Elements
