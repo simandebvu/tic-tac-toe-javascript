@@ -5,33 +5,18 @@ import gameLogic from './modules/gameLogic';
 const startApp = (() => {
   const { getGameArray, updateGameArray } = gameBoard;
   const cellDivs = document.querySelectorAll('.game-cell');
+  let currentSymbol = 'X';
   gameLogic.initResetButton();
 
   cellDivs.forEach(e => {
-    // const currentIndex = e.getAttribute('index');
-    // e.addEventListener('click', cellHandler);
     e.onclick = () => {
-      updateGameArray(e.getAttribute('index'), 'X');
+      updateGameArray(e.getAttribute('index'), currentSymbol);
+      if (currentSymbol === 'X') {
+        currentSymbol = 'O';
+      } else {
+        currentSymbol = 'X';
+      }
     };
   });
   return { getGameArray };
 })();
-
-// Select Elements
-// const restartBtn = document.querySelector('.restart');
-// const cellDivs = document.querySelectorAll('.game-cell');
-
-// // Functions
-// const restartGame = (e) => {
-//   console.log(e);
-// };
-
-// const cellHandler = (e) => {
-//   console.log(e);
-// };
-
-// // Add Events
-// restartBtn.addEventListener('click', restartGame);
-// cellDivs.forEach(e => {
-//   e.addEventListener('click', cellHandler);
-// });

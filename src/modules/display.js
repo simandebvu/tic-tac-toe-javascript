@@ -9,7 +9,6 @@ const appDisplay = (() => {
     cellDivs.forEach(cellDiv => { cellDiv.innerHTML = null; });
   };
 
-
   return { updateGameBoard, loadBlankBoard };
 })();
 
