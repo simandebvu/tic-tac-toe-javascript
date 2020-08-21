@@ -57,6 +57,13 @@ const appDisplay = (() => {
     return modalForm;
   };
 
+  const showSnackbar = () => {
+    const snackbar = document.querySelector('#snackbar');
+    snackbar.textContent = 'Invalid move!';
+    snackbar.classList.add('show');
+    setTimeout(() => { snackbar.className = snackbar.className.replace('show', ''); }, 3000);
+  };
+
   const showPlayerModal = () => {
     const form = insertUsernameModal();
     const modal = document.querySelector('.modal');
@@ -90,9 +97,13 @@ const appDisplay = (() => {
     nameDiv.appendChild(nameText);
   };
 
+  const hidePlayerModal = () => {
+    const modalDiv = document.querySelector('.modal-container');
+    modalDiv.classList.remove('show-modal');
+  };
 
   return {
-    updateGameBoard, loadBlankBoard, showPlayerModal, showCurrentPlayer, showWinner,
+    updateGameBoard, loadBlankBoard, showPlayerModal, showCurrentPlayer, showWinner, showSnackbar, hidePlayerModal,
   };
 })();
 

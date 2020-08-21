@@ -17,12 +17,11 @@ const startApp = (() => {
   const gameForm = document.querySelector('form');
   gameForm.onsubmit = ((e) => {
     e.preventDefault();
-    const modalDiv = document.querySelector('.modal-container');
     const { player1, player2 } = e.target.elements;
     playerX = gamePlayer(player1.value, 'X');
     playerO = gamePlayer(player2.value, 'O');
     currentPlayer = playerX;
-    modalDiv.classList.remove('show-modal');
+    display.hidePlayerModal();
     display.showCurrentPlayer(`${currentPlayer.getName()} - ${currentPlayer.getSymbol()} `);
   });
 
@@ -47,10 +46,7 @@ const startApp = (() => {
           switchUser();
         }
       } else {
-        const snackbar = document.querySelector('#snackbar');
-        snackbar.textContent = 'Invalid move!';
-        snackbar.classList.add('show');
-        setTimeout(() => { snackbar.className = snackbar.className.replace('show', ''); }, 3000);
+        display.showSnackbar();
       }
       display.showCurrentPlayer(`${currentPlayer.getName()} - ${currentPlayer.getSymbol()} `);
     };
