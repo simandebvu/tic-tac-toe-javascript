@@ -107,33 +107,3 @@ body {
   transform: scale(1);
   transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
 }
-
-
-.form-game-input{
-  height: 150px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-}
-
-.form-game-input > input{
-  height: 30px;
-  border-radius: 7px;
-  padding: 5px;
-  border: 0;
-}
-
-
-.name-input{
-  height: 30px;
-  border-radius: 7px;
-  padding: 5px;
-  background: #f4f4f4;
-  border: 0;
-}
-
-.name-submit-button{
-  background-color: #2979ff;
-  color: #fff;
-  border: 0;  
-}
