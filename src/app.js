@@ -23,6 +23,7 @@ const startApp = (() => {
     playerO = gamePlayer(player2.value, 'O');
     currentPlayer = playerX;
     modalDiv.classList.remove('show-modal');
+    display.showCurrentPlayer(`${currentPlayer.getName()} - ${currentPlayer.getSymbol()} `);
   });
 
   gameLogic.initResetButton();
