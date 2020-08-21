@@ -1,79 +1,3 @@
-# Project Name
-
-> One paragraph statement about the project.
-
-![screenshot](./app_screenshot.png)
-
-Additional description about the project and its features.
-
-## Built With
-
-- Major languages,
-- frameworks,
-- technologies used
-
-## Live Demo
-
-[Live Demo Link](https://livedemo.com)
-
-
-## Getting Started
-
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-### Setup
-
-### Install
-
-### Usage
-
-### Run tests
-
-### Deployment
-
-
-
-## Authors
-
-👤 **Author1**
-
-- Github: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- Linkedin: [linkedin](https://linkedin.com/linkedinhandle)
-
-👤 **Author2**
-
-- Github: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- Linkedin: [linkedin](https://linkedin.com/linkedinhandle)
-
-## 🤝 Contributing
-
-Contributions, issues and feature requests are welcome!
-
-Feel free to check the [issues page](issues/).
-
-## Show your support
-
-Give a ⭐️ if you like this project!
-
-## Acknowledgments
-
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
-
-## 📝 License
-
-This project is [MIT](lic.url) licensed.
-########################################################################
-
 # Tic Tac Toe Game
 
 <br />
@@ -96,7 +20,7 @@ This project is [MIT](lic.url) licensed.
   </p>
 </p>
 
-> A tic-tac-toe game that involves two players, gameboard that contains nine cells. Players take turn to place either letter X or O into the cell. Whoever has his letter on lined on the the three consecutive row cells, column cells or diagonal cells wins the game.
+> A tic-tac-toe game that involves two players, gameboard that contains nine cells. Players take turn to place either letter X or O into the cell. Whoever has his letter lined on three consecutive row cells, column cells or diagonal cells wins the game.
 
 ![screenshot](./app-screenshot.gif)
 
