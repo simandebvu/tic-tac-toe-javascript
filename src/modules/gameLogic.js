@@ -2,7 +2,7 @@ import Board from './gameBoard';
 import Display from './display';
 
 const gameLogic = (() => {
-  const winningCombinations = [
+  const winCombo = [
     [0, 1, 2],
     [3, 4, 5],
     [6, 7, 8],
@@ -38,7 +38,7 @@ const gameLogic = (() => {
     };
   };
 
-  const checkWinner = (symbol, boardArray) => winningCombinations.some(combo => combo.every(idx => boardArray[idx] === symbol));
+  const checkWinner = (symbol, arr) => winCombo.some(c => c.every(idx => arr[idx] === symbol));
 
   const checkDraw = (gameBoard) => [...gameBoard].every(item => item === 'X' || item === 'O');
 
