@@ -4,6 +4,8 @@ import gameLogic from './modules/gameLogic';
 import gamePlayer from './modules/gamePlayer';
 import display from './modules/display';
 
+// IIFE
+// eslint-disable-next-line no-unused-vars
 const startApp = (() => {
   let playerO = null;
   let playerX = null;
@@ -29,15 +31,6 @@ const startApp = (() => {
     currentPlayer = currentPlayer === playerX ? playerO : playerX;
   };
 
-  const endGame = (message) => {
-    display.showWinner(`${message} has won!`);
-    const b = document.querySelector('.btn-win-reset');
-    b.onclick = () => {
-      window.location.reload();
-      return false;
-    };
-  };
-
   cellDivs.forEach(e => {
     e.onclick = () => {
       const invalid = gameBoard.validateMove(e.getAttribute('index'));
@@ -46,9 +39,9 @@ const startApp = (() => {
         const winner = gameLogic.checkWinner(currentPlayer.getSymbol(), getGameArray());
         if (winner) {
           const winnersName = currentPlayer.getName();
-          endGame(winnersName);
+          gameLogic.endGame(winnersName);
         } else if (gameLogic.checkDraw(gameBoard.getGameArray())) {
-          endGame('Everyone');
+          gameLogic.endGame('Everyone');
         } else {
           switchUser();
         }

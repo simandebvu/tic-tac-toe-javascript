@@ -29,12 +29,21 @@ const gameLogic = (() => {
     };
   };
 
+  const endGame = (message) => {
+    Display.showWinner(`${message} has won!`);
+    const b = document.querySelector('.btn-win-reset');
+    b.onclick = () => {
+      window.location.reload();
+      return false;
+    };
+  };
+
   const checkWinner = (symbol, boardArray) => winningCombinations.some(combo => combo.every(idx => boardArray[idx] === symbol));
 
   const checkDraw = (gameBoard) => [...gameBoard].every(item => item === 'X' || item === 'O');
 
   return {
-    initResetButton, checkWinner, checkDraw, initRestartButton,
+    initResetButton, checkWinner, checkDraw, initRestartButton, endGame,
   };
 })();
 export default gameLogic;
