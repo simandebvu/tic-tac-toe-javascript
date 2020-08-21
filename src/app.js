@@ -28,6 +28,17 @@ const startApp = (() => {
     currentPlayer = currentPlayer === playerX ? playerO : playerX;
   };
 
+  const endGame = (message) => {
+    display.showWinner(`${message} has won!`);
+    const b = document.querySelector('.btn-win-reset');
+    b.onclick = () => {
+      const winnerContainerDiv = document.querySelector('.winning-message');
+      winnerContainerDiv.classList.remove('show');
+      gameBoard.resetBoard();
+      display.loadBlankBoard();
+    };
+  };
+
   cellDivs.forEach(e => {
     e.onclick = () => {
       const invalid = gameBoard.validateMove(e.getAttribute('index'));
@@ -36,28 +47,17 @@ const startApp = (() => {
         const winner = gameLogic.checkWinner(currentPlayer.getSymbol(), getGameArray());
         if (winner) {
           const winnersName = currentPlayer.getName();
-          display.showWinner(`${winnersName} has won!`);
-          const b = document.querySelector('.btn-win-reset');
-          b.onclick = () => {
-            const winnerContainerDiv = document.querySelector('.winning-message');
-            winnerContainerDiv.classList.toggle('show');
-            gameBoard.resetBoard();
-            display.loadBlankBoard();
-          };
+          endGame(winnersName);
         } else if (gameLogic.checkDraw(gameBoard.getGameArray())) {
-          display.showWinner('Everyone is a winner !');
-          const b = document.querySelector('.btn-win-reset');
-          b.onclick = () => {
-            const winnerContainerDiv = document.querySelector('.winning-message');
-            winnerContainerDiv.classList.remove('show');
-            gameBoard.resetBoard();
-            display.loadBlankBoard();
-          };
+          endGame('Everyone');
         } else {
           switchUser();
         }
       } else {
-        alert('Invalid move!');
+        const snackbar = document.querySelector('#snackbar');
+        snackbar.textContent = 'Invalid move!';
+        snackbar.classList.add('show');
+        setTimeout(() => { snackbar.className = snackbar.className.replace('show', ''); }, 3000);
       }
       display.showCurrentPlayer(`${currentPlayer.getName()} - ${currentPlayer.getSymbol()} `);
     };
