@@ -21,10 +21,20 @@ const gameLogic = (() => {
     };
   };
 
+  const initRestartButton = () => {
+    const b = document.querySelector('.btn-restart');
+    b.onclick = () => {
+      window.location.reload();
+      return false;
+    };
+  };
+
   const checkWinner = (symbol, boardArray) => winningCombinations.some(combo => combo.every(idx => boardArray[idx] === symbol));
 
   const checkDraw = (gameBoard) => [...gameBoard].every(item => item === 'X' || item === 'O');
 
-  return { initResetButton, checkWinner, checkDraw };
+  return {
+    initResetButton, checkWinner, checkDraw, initRestartButton,
+  };
 })();
 export default gameLogic;

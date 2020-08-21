@@ -9,6 +9,7 @@ const startApp = (() => {
   let playerX = null;
   let currentPlayer = null;
   display.showPlayerModal();
+  gameLogic.initRestartButton();
   const { getGameArray, updateGameArray } = gameBoard;
   const cellDivs = document.querySelectorAll('.game-cell');
   const gameForm = document.querySelector('form');
@@ -28,22 +29,12 @@ const startApp = (() => {
     currentPlayer = currentPlayer === playerX ? playerO : playerX;
   };
 
-  const pageReload = () => {
-    window.location.reload();
-    return false;
-  };
-
-
   const endGame = (message) => {
     display.showWinner(`${message} has won!`);
     const b = document.querySelector('.btn-win-reset');
     b.onclick = () => {
-      // const winnerContainerDiv = document.querySelector('.winning-message');
-      // winnerContainerDiv.classList.remove('show');
-      // gameBoard.resetBoard();
-      // display.loadBlankBoard();
-      // pageReload();
       window.location.reload();
+      return false;
     };
   };
 

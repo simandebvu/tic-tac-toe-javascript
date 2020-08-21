@@ -48,6 +48,7 @@ const appDisplay = (() => {
     modalForm.appendChild(inputPlayer2);
     const modalSubmit = document.createElement('input');
     modalSubmit.setAttribute('type', 'submit');
+    modalSubmit.setAttribute('value', 'Play!');
     modalSubmit.classList.add('name-submit-button');
     modalForm.appendChild(modalSubmit);
     modalContentDiv.appendChild(modalForm);

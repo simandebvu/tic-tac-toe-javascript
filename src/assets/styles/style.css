@@ -61,7 +61,23 @@ body {
   background: #3949ab;
   border-radius: 5px;
   position: absolute;
-  top: 60%;
+  top: 65%;
+  right: 15%;
+}
+
+
+.btn-restart {
+  margin: auto;
+  padding: 7px;
+  color: white;
+  width: 10%;
+  font-size: 20px;
+  border: none;
+  float: right;
+  background: #9b0000;
+  border-radius: 5px;
+  position: absolute;
+  top: 55%;
   right: 15%;
 }
 
