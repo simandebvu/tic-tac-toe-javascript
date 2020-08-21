@@ -10,18 +10,20 @@ body {
   justify-content: center;
 }
 
-/* 
-font-family: 'Poppins', sans-serif;
-font-family: 'Roboto', sans-serif; 
-*/
+@font-face {
+  font-family: "RockSalt-Regular";
+  src: url("../fonts/RockSalt-Regular.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
 
 .bg-title {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .sm-title {
   font-size: 3rem;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .message {
@@ -51,4 +53,57 @@ font-family: 'Roboto', sans-serif;
 .game-cell {
   height: 150px;
   background: coral;
+  font-size: 80px;
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+  font-family: "RockSalt-Regular";
+  cursor: pointer;
+}
+
+.winning-message {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  font-size: 5rem;
+}
+
+.winning-message.show {
+  display: flex;
+}
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.1);
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 1rem 1.5rem;
+  width: 24rem;
+  border-radius: 0.5rem;
+}
+
+.show-modal {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
 }

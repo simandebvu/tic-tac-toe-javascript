@@ -21,14 +21,12 @@ const gameLogic = (() => {
   };
 
   const checkDiag = (gameArray) => {
-    // We are comparting 3 things
     const leftDiag = checkWin(gameArray[0], gameArray[4], gameArray[8]);
     const rightDiag = checkWin(gameArray[2], gameArray[4], gameArray[6]);
     return leftDiag || rightDiag;
   };
 
   const checkRow = (gameArray) => {
-    // We are comparting 3 things
     const topRow = checkWin(gameArray[0], gameArray[1], gameArray[2]);
     const middleRow = checkWin(gameArray[3], gameArray[4], gameArray[5]);
     const bottomRow = checkWin(gameArray[6], gameArray[7], gameArray[8]);
@@ -42,7 +40,7 @@ const gameLogic = (() => {
     return leftCol || (middleCol || rightCol);
   };
 
-  const getWinner = (gameArr) => checkDiag(gameArr) || (checkRow(gameArr) || checkCol(gameArr));
+  const getWinner = async (gameArr) => await checkDiag(gameArr) || (checkRow(gameArr) || checkCol(gameArr));
 
   return { initResetButton, getWinner };
 })();
