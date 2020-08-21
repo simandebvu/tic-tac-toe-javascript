@@ -103,7 +103,13 @@ const appDisplay = (() => {
   };
 
   return {
-    updateGameBoard, loadBlankBoard, showPlayerModal, showCurrentPlayer, showWinner, showSnackbar, hidePlayerModal,
+    updateGameBoard,
+    loadBlankBoard,
+    showPlayerModal,
+    showCurrentPlayer,
+    showWinner,
+    showSnackbar,
+    hidePlayerModal,
   };
 })();
 
