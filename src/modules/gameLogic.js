@@ -2,6 +2,17 @@ import Board from './gameBoard';
 import Display from './display';
 
 const gameLogic = (() => {
+  const winningCombinations = [
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8],
+    [0, 3, 6],
+    [1, 4, 7],
+    [2, 5, 8],
+    [0, 4, 8],
+    [2, 4, 6],
+  ];
+
   const initResetButton = () => {
     const resetBtn = document.querySelector('.btn-reset');
     resetBtn.onclick = () => {
@@ -10,38 +21,9 @@ const gameLogic = (() => {
     };
   };
 
-  const checkWin = (a, b, c) => {
-    if ((a === b) && b === c) {
-      if ((a === '') || (b === '') || (c === '')) {
-        return null;
-      }
-      alert('Win!');
-    }
-    return null;
-  };
+  const checkWinner = (symbol, boardArray) => winningCombinations.some(combo => combo.every(idx => boardArray[idx] === symbol));
 
-  const checkDiag = (gameArray) => {
-    const leftDiag = checkWin(gameArray[0], gameArray[4], gameArray[8]);
-    const rightDiag = checkWin(gameArray[2], gameArray[4], gameArray[6]);
-    return leftDiag || rightDiag;
-  };
 
-  const checkRow = (gameArray) => {
-    const topRow = checkWin(gameArray[0], gameArray[1], gameArray[2]);
-    const middleRow = checkWin(gameArray[3], gameArray[4], gameArray[5]);
-    const bottomRow = checkWin(gameArray[6], gameArray[7], gameArray[8]);
-    return topRow || (middleRow || bottomRow);
-  };
-
-  const checkCol = (gameArray) => {
-    const leftCol = checkWin(gameArray[0], gameArray[3], gameArray[6]);
-    const middleCol = checkWin(gameArray[1], gameArray[4], gameArray[7]);
-    const rightCol = checkWin(gameArray[2], gameArray[5], gameArray[8]);
-    return leftCol || (middleCol || rightCol);
-  };
-
-  const getWinner = async (gameArr) => await checkDiag(gameArr) || (checkRow(gameArr) || checkCol(gameArr));
-
-  return { initResetButton, getWinner };
+  return { initResetButton, checkWinner };
 })();
 export default gameLogic;
