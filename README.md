@@ -20,7 +20,7 @@
   </p>
 </p>
 
-> A tic-tac-toe game that involves two players, gameboard that contains nine cells. Players take turn to place either letter X or O into the cell. Whoever has his letter on lined on the the three consecutive row cells, column cells or diagonal cells wins the game.
+> A tic-tac-toe game that involves two players, gameboard that contains nine cells. Players take turn to place either letter X or O into the cell. Whoever has his letter lined on three consecutive row cells, column cells or diagonal cells wins the game.
 
 ![screenshot](./app-screenshot.gif)
 
