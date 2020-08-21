@@ -51,12 +51,12 @@ body {
 }
 
 .noselect {
-  -webkit-touch-callout: none; 
-    -webkit-user-select: none; 
-     -khtml-user-select: none; 
-       -moz-user-select: none; 
-        -ms-user-select: none; 
-            user-select: none; 
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .btn-reset {
@@ -73,7 +73,6 @@ body {
   top: 65%;
   right: 15%;
 }
-
 
 .btn-restart {
   margin: auto;
@@ -129,7 +128,7 @@ body {
   flex-direction: column;
 }
 
-.btn-win-reset{
+.btn-win-reset {
   background-color: #2979ff;
   color: #fff;
   font-size: 25px;
@@ -139,7 +138,7 @@ body {
 }
 
 .winning-message-text {
-  color: #FFF;
+  color: #fff;
 }
 
 .modal {
@@ -154,6 +153,7 @@ body {
   transform: scale(1.1);
   transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
 }
+
 .modal-content {
   position: absolute;
   top: 50%;
@@ -201,42 +201,42 @@ body {
 }
 
 #snackbar {
-  visibility: hidden; 
-  min-width: 250px; 
+  visibility: hidden;
+  min-width: 250px;
   margin-left: -125px;
-  background-color: #333; 
-  color: #fff; 
-  text-align: center; 
-  border-radius: 2px; 
-  padding: 16px; 
-  position: fixed; 
-  z-index: 1; 
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
   left: 50%;
   bottom: 30px;
 }
 
 #snackbar.show {
-  visibility: visible; 
+  visibility: visible;
   -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
   animation: fadein 0.5s, fadeout 0.5s 2.5s;
 }
 
 @-webkit-keyframes fadein {
-  from {bottom: 0; opacity: 0;}
-  to {bottom: 30px; opacity: 1;}
+  from { bottom: 0; opacity: 0; }
+  to { bottom: 30px; opacity: 1; }
 }
 
 @keyframes fadein {
-  from {bottom: 0; opacity: 0;}
-  to {bottom: 30px; opacity: 1;}
+  from { bottom: 0; opacity: 0; }
+  to { bottom: 30px; opacity: 1; }
 }
 
 @-webkit-keyframes fadeout {
-  from {bottom: 30px; opacity: 1;}
-  to {bottom: 0; opacity: 0;}
+  from { bottom: 30px; opacity: 1; }
+  to { bottom: 0; opacity: 0; }
 }
 
 @keyframes fadeout {
-  from {bottom: 30px; opacity: 1;}
-  to {bottom: 0; opacity: 0;}
+  from { bottom: 30px; opacity: 1; }
+  to { bottom: 0; opacity: 0; }
 }
