@@ -8,7 +8,11 @@ const appDisplay = (() => {
 
   const loadBlankBoard = () => {
     const cellDivs = document.querySelectorAll('.game-cell');
-    cellDivs.forEach(cellDiv => { cellDiv.innerHTML = null; });
+    cellDivs.forEach(cellDiv => {
+      cellDiv.innerHTML = null;
+      cellDiv.classList.add('clickable');
+      cellDiv.classList.remove('not-clickable');
+    });
   };
 
   const insertUsernameModal = () => {
