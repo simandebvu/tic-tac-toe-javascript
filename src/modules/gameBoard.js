@@ -14,20 +14,18 @@ const gameBoard = (() => {
     });
   };
 
+  const validateMove = (idx) => gameArray[idx].length > 0;
 
   const updateGameArray = (index, value) => {
-    if (gameArray[index] === '') {
-      gameArray[index] = value;
-      Display.updateGameBoard(index, value);
-    } else {
-      alert('Index already occupied with a value');
-    }
+    gameArray[index] = value;
+    Display.updateGameBoard(index, value);
   };
 
   return {
     resetBoard,
     getGameArray,
     updateGameArray,
+    validateMove,
   };
 })();
 export default gameBoard;

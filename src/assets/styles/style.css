@@ -5,9 +5,14 @@
 }
 
 body {
-  margin-bottom: 200px;
   display: flex;
   justify-content: center;
+  position: relative;
+}
+
+.container {
+  margin: auto;
+  width: 50%;
 }
 
 @font-face {
@@ -30,20 +35,41 @@ body {
   font-size: large;
 }
 
-.btn-reset {
-  width: 7%;
-  margin: auto;
-  padding: 7px;
-  float: right;
-  background: cadetblue;
-  border-radius: 5px;
+.current-player {
+  position: absolute;
+  left: 15%;
+  font-size: 30px;
+  margin-top: 10px;
+}
+
+.clickable {
   cursor: pointer;
 }
 
-.game-template {
-  width: 50%;
+.not-clickable {
+  cursor: not-allowed;
+}
+
+.btn-reset {
   margin: auto;
-  background: cornflowerblue;
+  padding: 7px;
+  color: white;
+  width: 10%;
+  font-size: 20px;
+  border: none;
+  float: right;
+  background: #3949ab;
+  border-radius: 5px;
+  position: absolute;
+  top: 60%;
+  right: 15%;
+}
+
+.game-template {
+  margin: auto;
+  width: 75%;
+  margin-top: 20%;
+  background: #000;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
@@ -51,14 +77,13 @@ body {
 }
 
 .game-cell {
-  height: 150px;
-  background: coral;
-  font-size: 80px;
+  height: 125px;
+  background: #fff;
+  font-size: 55px;
   display: flex;
   justify-content: center;
-  padding: 15px;
+  align-items: center;
   font-family: "RockSalt-Regular";
-  cursor: pointer;
 }
 
 .winning-message {
@@ -67,7 +92,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.9);
   display: none;
   justify-content: center;
   align-items: center;
@@ -76,6 +101,20 @@ body {
 
 .winning-message.show {
   display: flex;
+  flex-direction: column;
+}
+
+.btn-win-reset{
+  background-color: #2979ff;
+  color: #fff;
+  font-size: 25px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+.winning-message-text {
+  color: #FFF;
 }
 
 .modal {
@@ -106,4 +145,32 @@ body {
   visibility: visible;
   transform: scale(1);
   transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.form-game-input {
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.form-game-input > input {
+  height: 30px;
+  border-radius: 7px;
+  padding: 5px;
+  border: 0;
+}
+
+.name-input {
+  height: 30px;
+  border-radius: 7px;
+  padding: 5px;
+  background: #f4f4f4;
+  border: 0;
+}
+
+.name-submit-button {
+  background-color: #2979ff;
+  color: #fff;
+  border: 0;
 }
