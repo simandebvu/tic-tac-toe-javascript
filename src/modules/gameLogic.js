@@ -23,7 +23,8 @@ const gameLogic = (() => {
 
   const checkWinner = (symbol, boardArray) => winningCombinations.some(combo => combo.every(idx => boardArray[idx] === symbol));
 
+  const checkDraw = (gameBoard) => [...gameBoard].every(item => item === 'X' || item === 'O');
 
-  return { initResetButton, checkWinner };
+  return { initResetButton, checkWinner, checkDraw };
 })();
 export default gameLogic;

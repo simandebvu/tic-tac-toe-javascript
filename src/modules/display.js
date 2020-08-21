@@ -1,6 +1,8 @@
 const appDisplay = (() => {
   const updateGameBoard = (index, value) => {
     const cellDivs = document.querySelectorAll('.game-cell');
+    cellDivs[index].classList.remove('clickable');
+    cellDivs[index].classList.add('not-clickable');
     cellDivs[index].innerHTML = value;
   };
 
@@ -59,9 +61,8 @@ const appDisplay = (() => {
 
   const showWinner = (message) => {
     const body = document.querySelector('body');
-    const containerDiv = document.createElement('div');
-    containerDiv.classList.add('winning-message');
-    containerDiv.setAttribute('id', 'winningMessage');
+    const containerDiv = document.querySelector('.winning-message');
+    containerDiv.innerHTML = null;
     const messageDiv = document.createElement('div');
     messageDiv.classList.add('winning-message-text');
     messageDiv.innerHTML = message;
@@ -76,9 +77,17 @@ const appDisplay = (() => {
     body.appendChild(containerDiv);
   };
 
+  const showCurrentPlayer = (message) => {
+    const nameDiv = document.querySelector('.current-player');
+    nameDiv.innerHTML = null;
+    const nameText = document.createElement('h1');
+    nameText.innerHTML = message;
+    nameDiv.appendChild(nameText);
+  };
+
 
   return {
-    updateGameBoard, loadBlankBoard, showPlayerModal, showWinner,
+    updateGameBoard, loadBlankBoard, showPlayerModal, showCurrentPlayer, showWinner,
   };
 })();
 

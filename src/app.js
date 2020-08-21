@@ -5,10 +5,6 @@ import gamePlayer from './modules/gamePlayer';
 import display from './modules/display';
 
 const startApp = (() => {
-  // const player1 = gamePlayer(players.player1.value, 'X');
-  // const player2 = gamePlayer(players.player2.value, 'O');
-  // alert(player1.getName());
-  // alert(player2.getName());
   let playerO = null;
   let playerX = null;
   let currentPlayer = null;
@@ -46,8 +42,25 @@ const startApp = (() => {
 
   cellDivs.forEach(e => {
     e.onclick = () => {
-      updateGameArray(e.getAttribute('index'), currentPlayer.getSymbol());
-      switchUser();
+      const invalid = gameBoard.validateMove(e.getAttribute('index'));
+      if (!invalid) {
+        updateGameArray(e.getAttribute('index'), currentPlayer.getSymbol());
+        if (gameLogic.checkDraw(gameBoard.getGameArray())) {
+          display.showWinner('Everyone is a winner !');
+          const b = document.querySelector('.btn-win-reset');
+          b.onclick = () => {
+            const winnerContainerDiv = document.querySelector('.winning-message');
+            winnerContainerDiv.classList.toggle('show');
+            gameBoard.resetBoard();
+            display.loadBlankBoard();
+          };
+        } else {
+          switchUser();
+        }
+      } else {
+        alert('Invalid move!');
+      }
+      display.showCurrentPlayer(`${currentPlayer.getName()} - ${currentPlayer.getSymbol()} `);
     };
   });
   return { getGameArray };
