@@ -1,0 +1,270 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.container {
+  margin: auto;
+  width: 50%;
+}
+
+@font-face {
+  font-family: "RockSalt-Regular";
+  src: url("../fonts/RockSalt-Regular.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+.bg-title {
+  font-family: "Roboto", sans-serif;
+}
+
+.sm-title {
+  font-size: 3rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.message {
+  font-size: large;
+}
+
+.current-player {
+  position: absolute;
+  left: 15%;
+  font-size: 30px;
+  margin-top: 10px;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.not-clickable {
+  cursor: not-allowed;
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.btn-reset {
+  margin: auto;
+  padding: 7px;
+  color: white;
+  width: 10%;
+  font-size: 20px;
+  border: none;
+  float: right;
+  background: #3949ab;
+  border-radius: 5px;
+  position: absolute;
+  top: 65%;
+  right: 15%;
+}
+
+.btn-restart {
+  margin: auto;
+  padding: 7px;
+  color: white;
+  width: 10%;
+  font-size: 20px;
+  border: none;
+  float: right;
+  background: #9b0000;
+  border-radius: 5px;
+  position: absolute;
+  top: 55%;
+  right: 15%;
+}
+
+.game-template {
+  margin: auto;
+  width: 75%;
+  margin-top: 20%;
+  background: #000;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 5px;
+}
+
+.game-cell {
+  height: 125px;
+  background: #fff;
+  font-size: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "RockSalt-Regular", Arial, Helvetica, sans-serif;
+}
+
+.winning-message {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  font-size: 5rem;
+}
+
+.winning-message.show {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn-win-reset {
+  background-color: #2979ff;
+  color: #fff;
+  font-size: 25px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+.winning-message-text {
+  color: #fff;
+}
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.1);
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 1rem 1.5rem;
+  width: 24rem;
+  border-radius: 0.5rem;
+}
+
+.show-modal {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.form-game-input {
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.form-game-input > input {
+  height: 30px;
+  border-radius: 7px;
+  padding: 5px;
+  border: 0;
+}
+
+.name-input {
+  height: 30px;
+  border-radius: 7px;
+  padding: 5px;
+  background: #f4f4f4;
+  border: 0;
+}
+
+.name-submit-button {
+  background-color: #2979ff;
+  color: #fff;
+  border: 0;
+}
+
+#snackbar {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+}
+
+#snackbar.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}

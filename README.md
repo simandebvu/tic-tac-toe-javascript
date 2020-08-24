@@ -1,58 +1,64 @@
-# Project Name
+# Tic Tac Toe Game
 
-> One paragraph statement about the project.
+<br />
+<p align="center">
+  <a href="https://github.com/simandebvu/tic-tac-toe-javascript">
+    <img src="js-image.png" alt="Logo" width="80" height="80">
+  </a>
 
-![screenshot](./app_screenshot.png)
+  <h3 align="center">Tic Tac Toe Game</h3>
 
-Additional description about the project and its features.
+  <p align="center">
+    A Tic Tac ToeGame App.
+    <br />
+    <a href="https://github.com/simandebvu/tic-tac-toe-javascript"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://github.com/simandebvu/tic-tac-toe-javascript/issues/">Report Bug</a>
+    ·
+    <a href="https://github.com/simandebvu/tic-tac-toe-javascript">Request Feature</a>
+  </p>
+</p>
+
+> A tic-tac-toe game that involves two players, gameboard that contains nine cells. Players take turn to place either letter X or O into the cell. Whoever has his letter lined on three consecutive row cells, column cells or diagonal cells wins the game.
+
+![screenshot](./app-screenshot.gif)
 
 ## Built With
 
-- Major languages,
-- frameworks,
-- technologies used
+- Javascript
+- Node
+- Webpack 
+- Bootstrap
+- VSCode
+- JSHint
+- Github Actions
 
 ## Live Demo
 
-[Live Demo Link](https://livedemo.com)
+[Live Demo Link](https://github.com/simandebvu/tic-tac-toe-javascript)
 
 
-## Getting Started
+<!-- INSTALLATION -->
+## Usage
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-### Setup
-
-### Install
-
-### Usage
-
-### Run tests
-
-### Deployment
-
-
-
+- You can download onto your machine and open `index.html`.
+  
 ## Authors
 
-👤 **Author1**
+👤 **Shingirayi Mandebvu**
 
-- Github: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- Linkedin: [linkedin](https://linkedin.com/linkedinhandle)
+- Github: [@simandebvu](https://github.com/simandebvu)
+- Twitter: [@simandebvu](https://twitter.com/simandebvu)
+- Linkedin: [linkedin](https://linkedin.com/in/simandebvu)
 
-👤 **Author2**
 
-- Github: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- Linkedin: [linkedin](https://linkedin.com/linkedinhandle)
+👤 **Qoosim AbdulGhaniyy**
 
+- Github: [@Qoosim](https://github.com/Qoosim)
+- Twitter: [@qoosim_ayinde](https://twitter.com/qoosim_ayinde)
+- Linkedin: [linkedin](https://linkedin.com/in/qoosim)
+- 
 ## 🤝 Contributing
 
 Contributions, issues and feature requests are welcome!
@@ -65,9 +71,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- Microverse
 
 ## 📝 License
 

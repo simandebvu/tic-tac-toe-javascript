@@ -1,0 +1,36 @@
+{
+  "name": "tic-tac-toe-javascript",
+  "version": "1.0.0",
+  "description": "A javascript Based TicTacToe",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "watch": "webpack --watch",
+    "server": "webpack-dev-server --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simandebvu/tic-tac-toe-javascript.git"
+  },
+  "author": "Shingirayi Mandebvu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/simandebvu/tic-tac-toe-javascript/issues"
+  },
+  "homepage": "https://github.com/simandebvu/tic-tac-toe-javascript#readme",
+  "devDependencies": {
+    "css-loader": "^4.2.1",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.2",
+    "file-loader": "^6.0.0",
+    "style-loader": "^1.2.1",
+    "stylelint": "^13.3.3",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-csstree-validator": "^1.8.0",
+    "stylelint-scss": "^3.17.2",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  }
+}
