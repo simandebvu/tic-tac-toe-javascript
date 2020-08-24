@@ -28,7 +28,7 @@
 
 - Javascript
 - Node
-- Webpack 
+- Webpack
 - Bootstrap
 - VSCode
 - JSHint
@@ -36,14 +36,14 @@
 
 ## Live Demo
 
-[Live Demo Link](https://github.com/simandebvu/tic-tac-toe-javascript)
+[Live Demo Link](https://simandebvu.github.io/tic-tac-toe-javascript/)
 
 
 <!-- INSTALLATION -->
 ## Usage
 
 - You can download onto your machine and open `index.html`.
-  
+
 ## Authors
 
 👤 **Shingirayi Mandebvu**
@@ -58,7 +58,7 @@
 - Github: [@Qoosim](https://github.com/Qoosim)
 - Twitter: [@qoosim_ayinde](https://twitter.com/qoosim_ayinde)
 - Linkedin: [linkedin](https://linkedin.com/in/qoosim)
-- 
+-
 ## 🤝 Contributing
 
 Contributions, issues and feature requests are welcome!
