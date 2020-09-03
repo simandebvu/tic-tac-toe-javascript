@@ -4,7 +4,7 @@
   "description": "A javascript Based TicTacToe",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "build": "webpack",
     "watch": "webpack --watch",
     "server": "webpack-dev-server --open"
@@ -20,11 +20,13 @@
   },
   "homepage": "https://github.com/simandebvu/tic-tac-toe-javascript#readme",
   "devDependencies": {
+    "@babel/preset-env": "^7.11.0",
     "css-loader": "^4.2.1",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.1.0",
     "eslint-plugin-import": "^2.20.2",
     "file-loader": "^6.0.0",
+    "jest": "^26.4.2",
     "style-loader": "^1.2.1",
     "stylelint": "^13.3.3",
     "stylelint-config-standard": "^20.0.0",
